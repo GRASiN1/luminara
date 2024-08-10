@@ -4,7 +4,9 @@ dotenv.config();
 const cors = require('cors');
 const express = require('express');
 const userRouter = require('./routes/user');
+const productRouter = require('./routes/product');
 const connection = require('./utils/connection');
+const { authenticateUser } = require('./middleware/authentication');
 
 //function calls
 connection(process.env.MONGO_URI);
@@ -23,6 +25,7 @@ app.get('/', (req, res) => {
     res.send('API is working');
 })
 app.use('/api/user', userRouter);
+app.use('/api/product', authenticateUser, productRouter);
 
 
 

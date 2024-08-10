@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 const productSchema = new Schema({
     productName: {
@@ -14,7 +15,6 @@ const productSchema = new Schema({
         type: String,
     },
     productId: {
-        required: true,
         type: String,
         unique: true,
     },
@@ -33,6 +33,13 @@ const productSchema = new Schema({
 }, {
     timestamps: true,
 })
+
+productSchema.pre('save', function (next) {
+    if (!this.productId) {
+        this.productId = uuidv4();
+    }
+    next();
+});
 
 const Product = model('products', productSchema);
 
