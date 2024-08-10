@@ -1,12 +1,11 @@
 const { Router } = require('express');
 
-
 const router = Router();
 
-router.post('/createProduct',);
-router.post('/updateProductById/:id',);
-router.delete('/deleteProductById/:id',);
-router.get('/getAllProducts',);
-router.get('/getProductById/:id',);
+router.post('/createProduct', restrictTo(['ADMIN']),);
+router.post('/updateProductById/:id', restrictTo(['ADMIN']),);
+router.delete('/deleteProductById/:id', restrictTo(['ADMIN']),);
+router.get('/getAllProducts', restrictTo(['NORMAL', 'ADMIN']),);
+router.get('/getProductById/:id', restrictTo(['NORMAL', 'ADMIN']),);
 
 module.exports = router;

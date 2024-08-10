@@ -23,6 +23,7 @@ async function handleCreateUser(req, res) {
                 fullName: user.fullName,
                 email: user.email,
                 _id: user._id,
+                role: user.role,
             }),
         });
     } else {
@@ -43,6 +44,7 @@ async function handleUserLogin(req, res) {
                 fullName: user.fullName,
                 email: user.email,
                 _id: user._id,
+                role: user.role,
             }),
         })
     } else {
@@ -58,6 +60,7 @@ async function handleGetProfile(req, res) {
             _id: user._id,
             name: user.fullName,
             email: user.email,
+            role: user.role,
         });
     } else {
         res.status(404);
