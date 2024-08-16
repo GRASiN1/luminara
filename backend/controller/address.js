@@ -50,8 +50,19 @@ async function handleUpdateAddressById(req, res) {
     }
 }
 
+async function handleDeleteAddressById(req, res) {
+    const addressToBeDeletedId = req.params.id;
+    try {
+        await Address.findByIdAndDelete(addressToBeDeletedId);
+        return res.status(200).json({ message: 'Deletion Completed' });
+    } catch (error) {
+        return res.status(400).json({ message: 'Error in deletion' });
+    }
+}
+
 module.exports = {
     handleCreateAddress,
     handleGetAllAddressOfUser,
     handleUpdateAddressById,
+    handleDeleteAddressById,
 }
