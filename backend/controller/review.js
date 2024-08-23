@@ -3,9 +3,11 @@ const Product = require('../models/product');
 
 async function handleCreateReview(req, res) {
     const { rating, comment } = req.body;
-    const product = await Product.find({ _id: req.params.productId });
+    const product = await Product.findById(req.params.productId);
     if (product) {
-        const alreadyReviewed = product.reviews.find(
+        const reviewsOfTheProduct = await Review.find({ reviewOf: req.params.productId });
+
+        const alreadyReviewed = reviewsOfTheProduct.find(
             (r) => r.reviewBy.toString() === req.user._id.toString()
         );
         if (alreadyReviewed) {
