@@ -25,7 +25,6 @@ const orderSchema = new Schema({
         type: Number,
     },
     deliveryStatus: {
-        required: true,
         type: String,
     },
     paymentMethod: {
