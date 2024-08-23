@@ -62,7 +62,7 @@ async function handleGetAllOrders(req, res) {
     }
 }
 async function handleUpadteOrderStatus(req, res) {
-    const orderId = req.params.orderId;
+    const orderId = req.params.id;
     const { deliveryStatus } = req.body;
 
     if (!deliveryStatus) {
