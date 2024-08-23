@@ -33,7 +33,11 @@ app.use('/api/address', authenticateUser, addressRouter);
 app.use('/api/review', authenticateUser, reviewRouter);
 app.use('/api/order', authenticateUser, orderRouter);
 
-
+/*
+Backend is done and running though i need to fix we are giving the reponse
+also we will have to make some changes in way we are handling order as per future requirement
+few more features need to be added in the order routes
+*/
 
 app.listen(PORT, () => {
     console.log(`Server listening at port : ${PORT}`)
