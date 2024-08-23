@@ -5,6 +5,7 @@ const cors = require('cors');
 const express = require('express');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/product');
+const addressRouter = require('./routes/address');
 const connection = require('./utils/connection');
 const { authenticateUser } = require('./middleware/authentication');
 
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 })
 app.use('/api/user', userRouter);
 app.use('/api/product', authenticateUser, productRouter);
+app.use('/api/address', authenticateUser, addressRouter)
 
 
 
