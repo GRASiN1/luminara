@@ -51,7 +51,7 @@ async function handleUpdateProductById(req, res) {
     const { productName, productDescription, productPrice, productImage, category, countInStock } = req.body;
 
     try {
-        const product = await Product.findOne({ id });
+        const product = await Product.findById(id);
 
         if (product) {
             product.productName = productName || product.productName;
