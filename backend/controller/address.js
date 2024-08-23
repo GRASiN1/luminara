@@ -30,7 +30,7 @@ async function handleUpdateAddressById(req, res) {
     const addressToBeChangedId = req.params.id;
     const { fullName, email, phoneNumber, fullAddress } = req.body;
     try {
-        const address = await Address.find({ addressToBeChangedId });
+        const address = await Address.findById(addressToBeChangedId);
         if (address) {
             address.fullName = fullName || address.fullName;
             address.fullAddress = fullAddress || address.fullAddress;
