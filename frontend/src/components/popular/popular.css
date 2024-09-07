@@ -1,0 +1,49 @@
+.full-screen-carousel {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-image {
+    width: 100vw;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+/* Individual dots */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Active dot (white) */
+.active-dot {
+    background-color: #edd500;
+}

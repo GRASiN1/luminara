@@ -1,65 +1,12 @@
-/* .navbar {
-    display: flex;
-    width: 100%;
-    height: 60px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.brandLogo {
-    flex: 1;
-    justify-content: left;
-}
-
-.searchArea {
-    flex: 4;
-}
-
-.functions {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-}
-
-.searchBox {
-    border: 1px solid #e8eaed;
-    border-radius: 5px;
-    width: 70%;
-}
-
-#brandLogo {
-    height: 150%;
-}
-
-#cart {
-    height: 5vh;
-}
-
-#wishList {
-    height: 5vh;
-}
-
-#profile {
-    height: 5vh;
-}
-
-input {
-    border: none;
-    outline: none;
-    background-color: #e8eaed;
-} */
-
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     width: 100%;
     height: 60px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    background-color: white;
 }
 
 .section {
@@ -81,6 +28,7 @@ input {
     flex: 1;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .cart {
@@ -144,4 +92,52 @@ input {
 input:focus {
     border-color: lightgray;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.login {
+    margin: 0px 15px 0px 15px;
+}
+
+.signup {
+    margin: 0px 15px 0px 15px;
+}
+
+#login {
+    padding: 7px 10px 7px 10px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-color: black;
+    border-style: none;
+    border-radius: 7px;
+}
+
+#signup {
+    padding: 7px 10px 7px 10px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-color: black;
+    border-style: none;
+    border-radius: 7px;
+}
+
+#login:hover,
+#signup:hover {
+    background-color: #edd500;
+    color: black;
+}
+
+a {
+    text-decoration: inherit;
+
+    color: inherit;
+}
+
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
 }

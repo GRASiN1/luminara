@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-bar {
+    text-align: center;
+    background-color: #e0e0e0;
+    width: 50%;
+    padding: 5px 0;
+    font-size: 18px;
+    margin-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: black;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+.menu-bar a:hover {
+    color: gray;
+}
