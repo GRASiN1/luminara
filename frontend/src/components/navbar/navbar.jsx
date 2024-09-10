@@ -28,9 +28,7 @@ export default function Navbar(props) {
     return (
         <nav class="navbar">
             <Link to='/' class="section logo">
-                {/* <div class="section logo"> */}
                 <img src={logo} alt="brandLogo" id='brandLogo' />
-                {/* </div> */}
             </Link>
             <div class="section search">
                 <div class="searchBox">
@@ -53,10 +51,7 @@ export default function Navbar(props) {
                 :
                 <div class="section profile">
                     <div className="login">
-                        <button id='login'><Link to='/login'>Login</Link></button>
-                    </div>
-                    <div className="signup">
-                        <button id='signup' ><Link to='/signup'>Signup</Link></button>
+                        <button id='login'><Link to='/login'>Login / Signup</Link></button>
                     </div>
                 </div>
             }

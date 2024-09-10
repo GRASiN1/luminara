@@ -1,9 +1,10 @@
-import React from "react"
+import React from "react";
+import "./loginPage.css";
 
 export default function LoginPage() {
     return (
         <div>
-            <p>this is login page</p>
+            need to work on it
         </div>
     )
 }
